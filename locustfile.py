@@ -8,6 +8,16 @@ class MyTaskSet(TaskSet):
             "password": "tesiscriminal01"
         })
 
+    def on_stop(self):
+        i = randint(0, 3)
+        cart = ["5dba71a8ac9bb10021220ecf", "5dba71d5db65500020a5718e", "5dba71edac9bb10021220ed1", "5dba71fbac9bb10021220ed3"]
+        self.client.request(method="DELETE",
+            url="carts/" + cart[i],
+            headers={
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYjYzODliYjAzMDU4MDAyMGEyZDBlOSIsImVtYWlsIjoibm9yYWltYXIubW9yYUBnbWFpbC5jb20iLCJpYXQiOjE1NzIyMjU0MzMsImV4cCI6MTU3MzQzNTAzM30.pVB8sCJ3d6L8KvrLPn-B3cIP4KZaG5DdPfclW_HV0k4"
+            }
+        )
+
     @task(6)
     def categories(self):
         self.client.request(method="GET",
