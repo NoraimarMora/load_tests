@@ -26,3 +26,5 @@ spec:
               value: locust-master
             - name: TARGET_URL
               value: http://134.209.142.62
+            - name: LOCUSTFILE_PATH
+              value: "./locustfile.py"
