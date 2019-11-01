@@ -3,3 +3,6 @@
 Dockerfile
 .dockerignore
 README.md
+locust_master_deployment.yaml
+locust_worker_deployment.yaml
+locust_master_service.yaml

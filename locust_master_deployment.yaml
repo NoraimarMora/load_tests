@@ -22,7 +22,7 @@ spec:
           env:
             - name: LOCUST_MODE
               value: master
-            - name: TARGET_HOST
+            - name: TARGET_URL
               value: http://137.209.142.62
           ports:
             - name: loc-master-web

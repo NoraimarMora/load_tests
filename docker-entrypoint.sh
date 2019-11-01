@@ -22,5 +22,4 @@ fi
 echo "Starting Locust in ${LOCUST_MODE} mode..."
 echo "$ locust ${LOCUST_OPTS} ${_LOCUST_OPTS}"
 
-cd /locust_tasks
 locust_tasks ${LOCUST_OPTS}
