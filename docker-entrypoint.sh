@@ -6,7 +6,7 @@ if [ -z "${TARGET_URL}" ]; then
 fi
 
 LOCUST_MODE="${LOCUST_MODE:=standalone}"
-_LOCUST_OPTS="-f ${LOCUSTFILE_PATH:-/locustfile.py} -H ${TARGET_URL}"
+_LOCUST_OPTS="-f ${LOCUSTFILE_PATH:./locustfile.py} -H ${TARGET_URL}"
 
 if [ "${LOCUST_MODE}" = "master" ]; then
     _LOCUST_OPTS="${_LOCUST_OPTS} --master"
@@ -22,4 +22,4 @@ fi
 echo "Starting Locust in ${LOCUST_MODE} mode..."
 echo "$ locust ${LOCUST_OPTS} ${_LOCUST_OPTS}"
 
-${LOCUST_OPTS} ${_LOCUST_OPTS}
+locust ${_LOCUST_OPTS}
