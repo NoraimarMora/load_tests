@@ -23,7 +23,7 @@ spec:
             - name: LOCUST_MODE
               value: master
             - name: TARGET_URL
-              value: http://137.209.142.62
+              value: http://134.209.142.62
             - name: LOCUSTFILE_PATH
               value: "./locustfile.py"
           ports:
